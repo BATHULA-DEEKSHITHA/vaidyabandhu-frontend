@@ -145,7 +145,7 @@ const DoctorsComponent = () => {
           color: "#4a5568",
           lineHeight: "1.4",
           fontWeight: "400",
-          fontFamily: "'Inter', sans-serif",
+           fontFamily: "'Poppins', sans-serif",
           marginBottom: "20px",
           opacity: animated ? 1 : 0,
           transform: animated ? "translateY(0)" : "translateY(30px)",

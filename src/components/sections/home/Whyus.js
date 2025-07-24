@@ -1,10 +1,57 @@
 import React, { Component } from "react";
-import whyus from "../../../data/whyus.json";
+
+// Import Poppins font
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+
+// Dummy data for whyus since the import was removed
+const whyus = [
+  {
+    icon: "flaticon-doctor",
+    title: "Expert Medical Team",
+    text: "Our network includes highly qualified doctors and healthcare professionals with years of experience."
+  },
+  {
+    icon: "flaticon-hospital",
+    title: "Wide Network",
+    text: "Access to a vast network of partner hospitals and diagnostic centers across Karnataka."
+  },
+  {
+    icon: "flaticon-stethoscope",
+    title: "Affordable Care",
+    text: "Significant discounts on treatments, surgeries, and diagnostics make healthcare accessible."
+  },
+  {
+    icon: "flaticon-clipboard",
+    title: "Easy Membership",
+    text: "Simple and quick membership process with instant card delivery."
+  },
+  {
+    icon: "flaticon-heart",
+    title: "Compassionate Support",
+    text: "Personalized support and guidance throughout your healthcare journey."
+  },
+  {
+    icon: "flaticon-call",
+    title: "24/7 Helpline",
+    text: "Free medical advice and assistance available whenever you need it."
+  }
+];
 
 class Whyus extends Component {
   render() {
     return (
-      <div className="row" style={{ paddingTop: "80px" }}> {/* Added padding-top */}
+      <div 
+        className="row" 
+        style={{ 
+          paddingTop: "80px",
+          fontFamily: "'Poppins', sans-serif" // Apply Poppins to all text in this section
+        }}
+      >
         <div className="col-lg-5 order-2 order-lg-1">
           <div className="sigma_about style-21">
             <div className="section-title" style={{ marginBottom: "40px" }}>
@@ -16,16 +63,11 @@ class Whyus extends Component {
                   textAlign: "center",
                   marginBottom: "8px",
                   lineHeight: "1.3",
+                  fontFamily: "'Poppins', sans-serif" // Added Poppins
                 }}
               >
                 Why Choose VaidyaBandhu?
               </h2>
-              {/* <h3
-                className="title text-white"
-                style={{ fontSize: "2.8rem", fontWeight: "800" }}
-              >
-                Why Choose VaidyaBandhu?
-              </h3> */}
             </div>
             <div className="sigma_about-content">
               {/* Data */}
@@ -34,9 +76,24 @@ class Whyus extends Component {
                   <div className="sigma_info-title">
                     <i className={"sigma_info-icon " + item.icon} />
                   </div>
-                  <div className="sigma_info-description">
-                    <h5>{item.title}</h5>
-                    <p>{item.text}</p>
+                  <div 
+                    className="sigma_info-description"
+                    style={{ fontFamily: "'Poppins', sans-serif" }} // Added Poppins
+                  >
+                    <h5
+                      style={{
+                        fontFamily: "'Poppins', sans-serif" // Added Poppins
+                      }}
+                    >
+                      {item.title}
+                    </h5>
+                    <p
+                      style={{
+                        fontFamily: "'Poppins', sans-serif" // Added Poppins
+                      }}
+                    >
+                      {item.text}
+                    </p>
                   </div>
                 </div>
               ))}

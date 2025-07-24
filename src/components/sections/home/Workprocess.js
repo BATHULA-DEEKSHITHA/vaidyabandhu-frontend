@@ -100,7 +100,7 @@ const Workprocess = () => {
             color: "#004d4f",
             // margin: "20px 0 25px", // Adjusted margins
             lineHeight: 1.2,
-             marginTop: 60,
+             marginTop: 70,
           }}
         >
           How Vaidya Bandhu <span style={{ color: "#007a7e" }}>Works</span>
@@ -110,7 +110,7 @@ const Workprocess = () => {
           color: "#4a5568",
           lineHeight: "1.4",
           fontWeight: "400",
-          fontFamily: "'Inter', sans-serif",
+          fontFamily: "'Poppins', sans-serif",
           maxWidth: "800px",
           margin: "0 auto 40px",
           opacity: animated ? 1 : 0,

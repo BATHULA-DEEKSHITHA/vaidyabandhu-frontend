@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+// Import Poppins font
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+
 const services = [
   {
     icon: "flaticon-stethoscope",
@@ -81,16 +89,16 @@ const ServicesPreview = () => {
     background: "linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%)",
     textAlign: "center",
     overflow: "hidden",
-    fontFamily: "'Inter', sans-serif",
+    fontFamily: "'Poppins', sans-serif",
   };
 
   const headingStyle = {
-    fontSize: "38px",
+    fontSize: "clamp(24px, 4vw, 32px)",
     fontWeight: "800",
     color: "#004d4f",
-    // marginBottom: "20px",
-    position: "relative",
-    display: "inline-block",
+    textAlign: "center",
+    marginBottom: "8px",
+    lineHeight: "1.5",
   };
 
   const subHeadingStyle = {
@@ -98,14 +106,13 @@ const ServicesPreview = () => {
     color: "#4a5568",
     maxWidth: "800px",
     margin: "0 auto 60px",
-    lineHeight: "1.4",
-    fontFamily: "'Inter', sans-serif",
+    lineHeight: "1.6",
     fontWeight: "400",
   };
 
   const gridStyle = {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", // Responsive columns
+    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
     justifyContent: "center",
     gap: "30px",
     maxWidth: "1200px",
@@ -122,13 +129,12 @@ const ServicesPreview = () => {
     flexDirection: "column",
     justifyContent: "flex-start",
     cursor: "pointer",
-    // Ensure all cards are the same fixed size
-    width: "100%", // Takes full width of grid cell
-    height: "400px", // Fixed height for all cards
-    transition: "all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)", // Unified transition
+    width: "100%",
+    height: "400px",
+    transition: "all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
     position: "relative",
     overflow: "hidden",
-    borderBottom: "4px solid transparent", // Base for dynamic border
+    borderBottom: "4px solid transparent",
   };
 
   const cardEntranceAnimation = (idx) => ({
@@ -136,7 +142,7 @@ const ServicesPreview = () => {
     transform: animated
       ? "translateY(0) scale(1)"
       : "translateY(30px) scale(0.95)",
-    transitionDelay: `${idx * 0.1}s`, // Staggered delay for entrance
+    transitionDelay: `${idx * 0.1}s`,
   });
 
   const iconContainerStyle = {
@@ -163,14 +169,14 @@ const ServicesPreview = () => {
     color: "#003d3f",
     marginBottom: "15px",
     lineHeight: "1.3",
-    transition: "transform 0.3s ease-out", // Added transition for bounce
+    transition: "transform 0.3s ease-out",
   };
 
   const listStyle = {
     paddingLeft: "20px",
     marginBottom: "0",
-    flexGrow: 1, // Allows the list to fill remaining space
-    overflowY: "auto", // Add scroll if content is too long for fixed height
+    flexGrow: 1,
+    overflowY: "auto",
   };
 
   const listItemStyle = {
@@ -183,33 +189,7 @@ const ServicesPreview = () => {
 
   return (
     <div style={sectionStyle}>
-      {/* <h2 style={headingStyle}>
-        Our Services
-        <span
-          style={{
-            content: '""',
-            position: "absolute",
-            left: "50%",
-            // bottom: "-10px",
-            // transform: "translateX(-50%)",
-            width: "80px",
-            height: "4px",
-            // background: "#007a7e",
-            borderRadius: "2px",
-          }}
-        ></span>
-      </h2> */}
-
-      <h2
-        style={{
-          fontSize: "clamp(24px, 4vw, 32px)",
-          fontWeight: 800,
-          color: "#004d4f",
-          textAlign: "center",
-          marginBottom: "8px",
-          lineHeight: "1.3",
-        }}
-      >
+      <h2 style={headingStyle}>
         Our <span style={{ color: "#007a7e" }}>Services</span>
       </h2>
 
@@ -233,13 +213,12 @@ const ServicesPreview = () => {
               style={{
                 ...cardBaseStyle,
                 ...cardEntranceAnimation(idx),
-                // Hover effects
                 ...(hoveredCard === idx && {
                   transform: "translateY(-8px) scale(1.02)",
-                  boxShadow: "0 25px 50px rgba(0, 122, 126, 0.35)", // Stronger shadow
+                  boxShadow: "0 25px 50px rgba(0, 122, 126, 0.35)",
                   background:
-                    "linear-gradient(135deg, #f0ffff 0%, #ffffff 100%)", // Subtle background shift
-                  borderBottom: "4px solid #007a7e", // Primary color border
+                    "linear-gradient(135deg, #f0ffff 0%, #ffffff 100%)",
+                  borderBottom: "4px solid #007a7e",
                 }),
               }}
               onMouseEnter={() => setHoveredCard(idx)}
@@ -249,8 +228,8 @@ const ServicesPreview = () => {
                 style={{
                   ...iconContainerStyle,
                   ...(hoveredCard === idx && {
-                    transform: "scale(1.1)", // Icon slightly grows
-                    backgroundColor: "#CCF5F5", // Lighter background for icon
+                    transform: "scale(1.1)",
+                    backgroundColor: "#CCF5F5",
                   }),
                 }}
               >
@@ -260,7 +239,7 @@ const ServicesPreview = () => {
                 style={{
                   ...titleStyle,
                   ...(hoveredCard === idx && {
-                    transform: "translateY(-3px)", // Title "bounces" up slightly
+                    transform: "translateY(-3px)",
                   }),
                 }}
               >

@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from "react";
 import "../../../assets/css/about.css";
 
+// Import Poppins font
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+
 const LeadershipInline = () => {
   const [animated, setAnimated] = useState(false);
   const [hoveredSection, setHoveredSection] = useState(null);
-
   useEffect(() => {
     const timer = setTimeout(() => setAnimated(true), 200);
     return () => clearTimeout(timer);
   }, []);
-
   return (
     <section
       className={`about-section leadership-section ${
@@ -19,9 +25,10 @@ const LeadershipInline = () => {
         paddingTop: "160px",
         background: "linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%)",
         color: "#4a5568",
-        lineHeight: "1.4",
+        lineHeight: "1.6",
         overflow: "hidden",
         position: "relative",
+        fontFamily: "'Poppins', sans-serif", // Added Poppins to all text
       }}
     >
       {/* Decorative background elements */}
@@ -57,7 +64,6 @@ const LeadershipInline = () => {
           zIndex: 0,
         }}
       ></div>
-
       <div
         className="container"
         style={{
@@ -93,6 +99,7 @@ const LeadershipInline = () => {
                 ? "translateY(0) scale(1)"
                 : "translateY(50px) scale(0.98)", // More pronounced entrance
               transitionDelay: "0.2s",
+              fontFamily: "'Poppins', sans-serif", // Added Poppins
             }}
             onMouseEnter={() => setHoveredSection("ceo")}
             onMouseLeave={() => setHoveredSection(null)}
@@ -107,6 +114,7 @@ const LeadershipInline = () => {
                 paddingBottom: "20px", // More space for underline
                 textAlign: "center",
                 marginBottom: "25px", // More space below title
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               Message from the <span style={{ color: "#007a7e" }}>Founder</span>
@@ -144,7 +152,6 @@ const LeadershipInline = () => {
                 }}
               ></span>
             </h2>
-
             {/* Dr. Ajith Ramaswamy's Photo and Name/Designation Container */}
             <div
               style={{
@@ -153,6 +160,7 @@ const LeadershipInline = () => {
                 gap: "20px",
                 marginBottom: "20px",
                 flexDirection: "row",
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               {" "}
@@ -191,6 +199,7 @@ const LeadershipInline = () => {
                     opacity: animated ? 1 : 0,
                     transform: animated ? "translateY(0)" : "translateY(15px)",
                     transition: `opacity 0.7s ease-out 0.4s, transform 0.7s ease-out 0.4s`,
+                    fontFamily: "'Poppins', sans-serif", // Added Poppins
                   }}
                 >
                   Dr. Ajith Ramaswamy
@@ -205,13 +214,13 @@ const LeadershipInline = () => {
                     opacity: animated ? 1 : 0,
                     transform: animated ? "translateY(0)" : "translateY(15px)",
                     transition: `opacity 0.7s ease-out 0.5s, transform 0.7s ease-out 0.5s`,
+                    fontFamily: "'Poppins', sans-serif", // Added Poppins
                   }}
                 >
                   Founder, Managing Director & CEO – Vaidya Bandhu
                 </h5>
               </div>
             </div>
-
             <p
               style={{
                 marginBottom: "15px",
@@ -220,6 +229,7 @@ const LeadershipInline = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(15px)",
                 transition: `opacity 0.7s ease-out 0.6s, transform 0.7s ease-out 0.6s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               At Vaidya Bandhu, our vision is rooted in a powerful belief -
@@ -236,6 +246,7 @@ const LeadershipInline = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(15px)",
                 transition: `opacity 0.7s ease-out 0.7s, transform 0.7s ease-out 0.7s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               The seeds of Vaidya Bandhu were sown during a profoundly moving
@@ -252,6 +263,7 @@ const LeadershipInline = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(15px)",
                 transition: `opacity 0.7s ease-out 0.8s, transform 0.7s ease-out 0.8s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               When I met Mr. Subhashith Shetty, a like-minded entrepreneur and
@@ -270,6 +282,7 @@ const LeadershipInline = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(15px)",
                 transition: `opacity 0.7s ease-out 0.9s, transform 0.7s ease-out 0.9s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               But our mission goes beyond discounts. For patients facing extreme
@@ -294,6 +307,7 @@ const LeadershipInline = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(20px)",
                 transition: `opacity 0.8s ease-out 1.0s, transform 0.8s ease-out 1.0s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               Vaidya Bandhu is more than an organization. It is a promise. A
@@ -311,6 +325,7 @@ const LeadershipInline = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(20px)",
                 transition: `opacity 0.8s ease-out 1.2s, transform 0.8s ease-out 1.2s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               Thank you for believing in our mission. We are here to help, and
@@ -334,6 +349,7 @@ const LeadershipInline = () => {
                 ? "translateY(0) scale(1)"
                 : "translateY(50px) scale(0.98)",
               transitionDelay: "0.8s",
+              fontFamily: "'Poppins', sans-serif", // Added Poppins
             }}
             onMouseEnter={() => setHoveredSection("coo")}
             onMouseLeave={() => setHoveredSection(null)}
@@ -347,6 +363,7 @@ const LeadershipInline = () => {
                 paddingBottom: "20px",
                 textAlign: "center",
                 marginBottom: "25px",
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               Message from the <span style={{ color: "#007a7e" }}>Founder</span>
@@ -382,7 +399,6 @@ const LeadershipInline = () => {
                 }}
               ></span>
             </h2>
-
             {/* Dr. Subhashith Shetty's Photo and Name/Designation Container */}
             <div
               style={{
@@ -391,6 +407,7 @@ const LeadershipInline = () => {
                 gap: "20px",
                 marginBottom: "20px",
                 flexDirection: "row",
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               {" "}
@@ -429,6 +446,7 @@ const LeadershipInline = () => {
                     opacity: animated ? 1 : 0,
                     transform: animated ? "translateY(0)" : "translateY(15px)",
                     transition: `opacity 0.7s ease-out 1.0s, transform 0.7s ease-out 1.0s`,
+                    fontFamily: "'Poppins', sans-serif", // Added Poppins
                   }}
                 >
                   Mr. Subhashith Shetty
@@ -442,13 +460,13 @@ const LeadershipInline = () => {
                     opacity: animated ? 1 : 0,
                     transform: animated ? "translateY(0)" : "translateY(15px)",
                     transition: `opacity 0.7s ease-out 1.1s, transform 0.7s ease-out 1.1s`,
+                    fontFamily: "'Poppins', sans-serif", // Added Poppins
                   }}
                 >
                   Founder, Director & COO – Vaidya Bandhu
                 </h5>
               </div>
             </div>
-
             <p
               style={{
                 marginBottom: "15px",
@@ -457,6 +475,7 @@ const LeadershipInline = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(15px)",
                 transition: `opacity 0.7s ease-out 1.2s, transform 0.7s ease-out 1.2s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               At Vaidya Bandhu, our mission is simple but transformative - to
@@ -473,6 +492,7 @@ const LeadershipInline = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(15px)",
                 transition: `opacity 0.7s ease-out 1.3s, transform 0.7s ease-out 1.3s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               The journey began when a close acquaintance of mine was admitted
@@ -491,6 +511,7 @@ const LeadershipInline = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(15px)",
                 transition: `opacity 0.7s ease-out 1.4s, transform 0.7s ease-out 1.4s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               It was heartbreaking, and more importantly, it was avoidable. If
@@ -506,6 +527,7 @@ const LeadershipInline = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(15px)",
                 transition: `opacity 0.7s ease-out 1.5s, transform 0.7s ease-out 1.5s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               This experience stayed with me. I shared it with Dr. Ajith, whose
@@ -522,6 +544,7 @@ const LeadershipInline = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(15px)",
                 transition: `opacity 0.7s ease-out 1.5s, transform 0.7s ease-out 1.5s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               Along with offering 10% to 40% discounts on medical treatments and
@@ -530,7 +553,6 @@ const LeadershipInline = () => {
               for us, it’s not just about discounts - it’s about dignity,
               access, and saving lives.
             </p>
-
             <p
               style={{
                 fontWeight: 700,
@@ -548,6 +570,7 @@ const LeadershipInline = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(20px)",
                 transition: `opacity 0.8s ease-out 1.6s, transform 0.8s ease-out 1.6s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               Today, many people feel that healthcare is no longer about care,
@@ -568,6 +591,7 @@ const LeadershipInline = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(20px)",
                 transition: `opacity 0.8s ease-out 1.8s, transform 0.8s ease-out 1.8s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               Thank you for trusting Vaidya Bandhu. We are here to stand by your
@@ -576,7 +600,6 @@ const LeadershipInline = () => {
           </div>
         </div>
       </div>
-
       {/* Keyframes for the floating background shapes */}
       <style>
         {`
@@ -590,80 +613,65 @@ const LeadershipInline = () => {
             50% { transform: translate(-25px, -25px) rotate(-7deg); }
             100% { transform: translate(0, 0) rotate(0deg); }
           }
-
           /* Keep desktop styles untouched */
           .leadership-section {
             padding-bottom: 80px;
           }
-
           /* Mobile adjustments */
           @media screen and (max-width: 768px) {
             .leadership-section {
               padding-top: 100px !important;
               padding-bottom: 30px !important;
             }
-
             .container {
               padding: 0 10px !important;
             }
-
             div[style*="padding: 40px"] {
               padding: 20px !important;
               margin-bottom: 15px !important;
             }
-
             div[style*="display: flex"][style*="flex-direction: row"] {
               flex-direction: column !important;
               align-items: center !important;
               text-align: center !important;
               gap: 15px !important;
             }
-
             img[style*="width: 150px"] {
               width: 120px !important;
               height: 120px !important;
               margin: 0 auto !important;
             }
-
             h2[style*="font-size"] {
               font-size: 20px !important;
               margin-bottom: 15px !important;
               padding-bottom: 12px !important;
             }
-
             div[style*="gap: 30px"] {
               gap: 15px !important;
             }
           }
-
           /* Smaller mobile adjustments */
   @media screen and (max-width: 480px) {
   .leadership-section {
     padding-top: 120px !important; /* ↓ Reduced from 150 or 160 */
     padding-bottom: 20px !important;
   }
-
   div[style*="padding: 40px"] {
     padding: 15px !important;
     margin-top: 40px !important;  /* ↓ Reduced from 60 */
     margin-bottom: 10px !important;
   }
-
   img[style*="width: 150px"] {
     width: 100px !important;
     height: 100px !important;
   }
-
   h2[style*="font-size"] {
     font-size: 18px !important;
   }
 }
-
-
         `}
       </style>
     </section>
   );
 };
-
 export default LeadershipInline;

@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
 
+// Import Poppins font
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+
 const WhoCanBenefit = () => {
   const [itemsVisible, setItemsVisible] = useState({});
   const [animated, setAnimated] = useState(false);
@@ -30,9 +38,9 @@ const WhoCanBenefit = () => {
       style={{
         padding: "30px 20px 20px",
         background: "linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%)",
-        fontFamily: "'Inter', sans-serif",
+        fontFamily: "'Poppins', sans-serif", // Apply Poppins to all text
         color: "#4a5568",
-        lineHeight: "1.4",
+        lineHeight: "1.6", // Improved line height
         overflow: "hidden",
         position: "relative",
         opacity: animated ? 1 : 0,
@@ -80,7 +88,10 @@ const WhoCanBenefit = () => {
           zIndex: 1,
         }}
       >
-        <h2 className="benefit-heading">
+        <h2 
+          className="benefit-heading"
+          style={{ fontFamily: "'Poppins', sans-serif" }} // Added Poppins
+        >
           Who Can <span className="highlight">Benefit</span>?
         </h2>
 
@@ -111,14 +122,13 @@ const WhoCanBenefit = () => {
           <div
             className="benefit-text"
             style={{
-              // flex: "1 1 500px",
               maxWidth: "50%",
               opacity: animated ? 1 : 0,
               transform: animated ? "translateX(0)" : "translateX(50px)",
               transition: `opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s`,
             }}
           >
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, fontFamily: "'Poppins', sans-serif" }}>
               {[
                 "Patients who need affordable treatments & surgeries",
                 "Families looking for trusted doctors & hospitals",
@@ -139,6 +149,7 @@ const WhoCanBenefit = () => {
                     transform: itemsVisible[index]
                       ? "translateY(0)"
                       : "translateY(30px)",
+                    fontFamily: "'Poppins', sans-serif", // Added Poppins
                   }}
                 >
                   <span
@@ -146,11 +157,12 @@ const WhoCanBenefit = () => {
                       marginRight: "15px",
                       color: "#007a7e",
                       fontSize: "1.6rem",
+                      fontFamily: "'Poppins', sans-serif", // Added Poppins
                     }}
                   >
                     ✔
                   </span>
-                  {item}
+                  <span style={{ fontFamily: "'Poppins', sans-serif" }}>{item}</span> {/* Added Poppins to item text */}
                 </li>
               ))}
             </ul>
@@ -214,6 +226,7 @@ const WhoCanBenefit = () => {
   color: #004d4f;
   text-align: center;
   margin-bottom: 15px;
+  font-family: "'Poppins', sans-serif"; /* Added Poppins */
 }
 
 .highlight {
@@ -239,9 +252,6 @@ const WhoCanBenefit = () => {
     gap: 20px !important;
   }
 }
-
-
-
         `}
       </style>
     </section>

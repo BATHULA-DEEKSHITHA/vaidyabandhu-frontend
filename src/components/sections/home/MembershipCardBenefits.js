@@ -69,7 +69,7 @@ const MembershipCardBenefits = () => {
           maxWidth: "800px",
           margin: "0 auto 10px",
           lineHeight: "1.4",
-          fontFamily: "'Inter', sans-serif",
+           fontFamily: "'Poppins', sans-serif",
           fontWeight: "400"
         }}>
           To make affordable healthcare accessible to all, we offer a ₹49 membership card, valid for 1 year.

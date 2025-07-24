@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
 
+// Import Poppins font
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+
 class ContactIcons extends Component {
   constructor(props) {
     super(props);
@@ -50,6 +58,7 @@ class ContactIcons extends Component {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'flex-start',
+      fontFamily: "'Poppins', sans-serif", // Added Poppins
     };
 
     const iconCircleStyle = {
@@ -74,6 +83,7 @@ class ContactIcons extends Component {
       fontWeight: 600,
       marginBottom: '10px',
       fontSize: '1.3rem',
+      fontFamily: "'Poppins', sans-serif", // Added Poppins
     };
 
     const contentStyle = {
@@ -82,6 +92,7 @@ class ContactIcons extends Component {
       lineHeight: 1.6,
       marginBottom: 0,
       whiteSpace: 'pre-line',
+      fontFamily: "'Poppins', sans-serif", // Added Poppins
     };
 
     return (
@@ -108,6 +119,7 @@ class ContactIcons extends Component {
       backgroundColor: '#f8fcfc', // Very light background for the section
       paddingTop: '80px',
       paddingBottom: '80px',
+      fontFamily: "'Poppins', sans-serif", // Added Poppins to section
     };
 
     return (

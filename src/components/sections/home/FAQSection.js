@@ -1,5 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
 
+// Import Poppins font
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+
 const faqs = [
   {
     question: "What is Vaidya Bandhu?",
@@ -49,7 +57,6 @@ const FAQSection = () => {
   const [openFAQIndex, setOpenFAQIndex] = useState(0);
   // State to manage hover effect on question headers
   const [hoveredQuestionIndex, setHoveredQuestionIndex] = useState(null);
-
   // Ref to measure the actual height of the answer content (still useful for initial height calculation for transition)
   const answerRefs = useRef(faqs.map(() => React.createRef()));
 
@@ -70,7 +77,7 @@ const FAQSection = () => {
         background: "linear-gradient(135deg, #f5fdfd 0%, #e0f7fa 100%)", // Light, calming gradient
         textAlign: "center",
         overflow: "hidden",
-        fontFamily: "'Inter', sans-serif",
+        fontFamily: "'Poppins', sans-serif", // Apply Poppins to all text
         position: "relative",
       }}
     >
@@ -107,7 +114,6 @@ const FAQSection = () => {
           zIndex: 0,
         }}
       ></div>
-
       <div
         style={{
           width: "90%",
@@ -132,15 +138,14 @@ const FAQSection = () => {
         >
           Frequently Asked <span style={{ color: "#007a7e" }}>Questions</span>
         </h2>
-
         {/* Subtitle/Intro Paragraph */}
         <p
           style={{
             fontSize: "clamp(16px, 2.5vw, 20px)",
             color: "#4a5568",
-            lineHeight: "1.4",
+            lineHeight: "1.6", // Improved line height
             fontWeight: "400",
-            fontFamily: "'Inter', sans-serif",
+            // fontFamily: "'Poppins', sans-serif", // Removed redundant declaration
             marginBottom: "30px",
             opacity: animated ? 1 : 0,
             transform: animated ? "translateY(0)" : "translateY(30px)",
@@ -149,7 +154,6 @@ const FAQSection = () => {
         >
           Find quick answers to common questions about Vaidya Bandhu's services, membership, and benefits.
         </p>
-
         {/* FAQ List */}
         <div
           style={{
@@ -160,7 +164,6 @@ const FAQSection = () => {
         >
           {faqs.map((faq, index) => {
             const isOpen = openFAQIndex === index;
-
             return (
               <div
                 key={index}
@@ -216,7 +219,6 @@ const FAQSection = () => {
                     {isOpen ? '▲' : '▼'}
                   </span>
                 </div>
-
                 {/* Answer Content */}
                 <div
                   style={{
@@ -234,7 +236,7 @@ const FAQSection = () => {
                     style={{
                       fontSize: "clamp(15px, 2vw, 17px)",
                       color: "#5a6778",
-                      lineHeight: "1.7",
+                      lineHeight: "1.6", // Improved line height
                       margin: 0,
                       paddingTop: "15px", // Space from top of answer area
                     }}
@@ -247,7 +249,6 @@ const FAQSection = () => {
           })}
         </div>
       </div>
-
       {/* Keyframes for the floating background shapes */}
       <style>
         {`
@@ -261,10 +262,9 @@ const FAQSection = () => {
             50% { transform: translate(-20px, -20px) rotate(-5deg); }
             100% { transform: translate(0, 0) rotate(0deg); }
           }
-
           /* Responsive adjustments using media queries */
           @media (max-width: 768px) {
-            div[style*="padding: 80px 20px"] { /* Section padding */
+            div[style*="padding: 40px 20px"] { /* Section padding */
               padding: 60px 15px !important;
             }
             div[style*="width: 90%"] { /* Main content wrapper */
@@ -283,9 +283,8 @@ const FAQSection = () => {
               font-size: clamp(14px, 1.8vw, 16px) !important;
             }
           }
-
           @media (max-width: 480px) {
-            div[style*="padding: 80px 20px"] { /* Section padding */
+            div[style*="padding: 40px 20px"] { /* Section padding */
               padding: 40px 10px !important;
             }
             div[style*="width: 90%"] { /* Main content wrapper */

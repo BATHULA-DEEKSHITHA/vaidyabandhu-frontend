@@ -3,6 +3,14 @@ import MembershipModal from "../../layouts/MembershipModal";
 import workprocessblock from "../../../data/workprocess.json";
 import "../../../assets/css/about.css";
 
+// Import Poppins font
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+
 // Updated dummy workprocess data with 3 steps and new content
 const dummyWorkprocess = [
   {
@@ -34,7 +42,6 @@ const dummyWorkprocess = [
     imageUrl: "https://cdn-icons-png.flaticon.com/128/2991/2991158.png", // Support/help icon
   },
 ];
-
 class Workprocess extends Component {
   render() {
     return (
@@ -43,7 +50,7 @@ class Workprocess extends Component {
         style={{
           padding: "40px 20px",
           background: "linear-gradient(135deg, #f5fdfd 0%, #e0f7fa 100%)", // Light, calming gradient
-          fontFamily: "'Inter', sans-serif",
+          fontFamily: "'Poppins', sans-serif", // Apply Poppins to all text
           color: "#4a5568",
           overflow: "hidden",
           position: "relative",
@@ -82,7 +89,6 @@ class Workprocess extends Component {
             zIndex: 0,
           }}
         ></div>
-
         <div
           className="container"
           style={{
@@ -118,9 +124,10 @@ class Workprocess extends Component {
                     fontSize: "clamp(36px, 5vw, 38px)",
                     fontWeight: "800",
                     color: "#004d4f",
-                    marginBottom: "0",
-                    lineHeight: "1.2",
+                    marginBottom: "10px",
+                    lineHeight: "1.5", // Improved line height
                     textAlign: "center",
+                    fontFamily: "'Poppins', sans-serif", // Added Poppins
                   }}
                 >
                   How it Works?
@@ -134,12 +141,13 @@ class Workprocess extends Component {
                 style={{
                   fontSize: "clamp(16px, 2.5vw, 18px)",
                   color: "#4a5568",
-                  lineHeight: "1.4",
+                  lineHeight: "1.6", // Improved line height
                   marginBottom: "0",
                   opacity: 1,
                   transform: "translateY(0)",
                   transition:
                     "opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s",
+                  fontFamily: "'Poppins', sans-serif", // Added Poppins
                 }}
               >
                 At Vaidya Bandhu, we make quality healthcare simple, affordable,
@@ -152,7 +160,6 @@ class Workprocess extends Component {
               <MembershipModal />
             </div>
           </div>
-
           <div
             style={{
               display: "grid",
@@ -178,6 +185,7 @@ class Workprocess extends Component {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "flex-start",
+                  fontFamily: "'Poppins', sans-serif", // Added Poppins
                 }}
               >
                 <div
@@ -223,6 +231,7 @@ class Workprocess extends Component {
                     marginBottom: "15px",
                     lineHeight: "1.3",
                     transition: "all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                    fontFamily: "'Poppins', sans-serif", // Added Poppins
                   }}
                   dangerouslySetInnerHTML={{ __html: item.title }}
                 />
@@ -234,22 +243,23 @@ class Workprocess extends Component {
                     flexGrow: 1,
                     color: "#5a6778",
                     fontSize: "clamp(15px, 1.8vw, 16px)",
-                    lineHeight: "1.3", // Tightest line spacing
+                    lineHeight: "1.6", // Improved line height
+                    fontFamily: "'Poppins', sans-serif", // Added Poppins
                   }}
                 >
                   {item.points.map((point, j) => (
                     <li
                       key={j}
                       style={{
-                        margin: "0", // No margin at all
+                        margin: "0 0 8px 0", // Added small bottom margin
                         listStyle: "disc",
+                        fontFamily: "'Poppins', sans-serif", // Added Poppins
                       }}
                     >
                       {point}
                     </li>
                   ))}
                 </ul>
-
                 <span
                   className="steps"
                   style={{
@@ -261,6 +271,7 @@ class Workprocess extends Component {
                     right: "20px",
                     zIndex: 0,
                     transition: "all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                    fontFamily: "'Poppins', sans-serif", // Added Poppins
                   }}
                 >
                   Step {i + 1}
@@ -285,7 +296,6 @@ class Workprocess extends Component {
             ))}
           </div>
         </div>
-
         {/* Keyframes for animations */}
         <style>
           {`
@@ -313,7 +323,6 @@ class Workprocess extends Component {
               box-shadow: 0 0 0 0 rgba(0, 122, 126, 0);
             }
           }
-
           /* Responsive adjustments */
           @media (max-width: 992px) {
             div[style*="flex: 1 1 300px"] { /* Header columns */
@@ -334,7 +343,6 @@ class Workprocess extends Component {
                 padding: 10px 20px !important;
             }
           }
-
           @media (max-width: 768px) {
             div[style*="padding: 80px 20px"] { /* Section padding */
               padding: 60px 15px !important;
@@ -375,7 +383,6 @@ class Workprocess extends Component {
                 right: 15px !important;
             }
           }
-
           @media (max-width: 480px) {
             div[style*="padding: 80px 20px"] { /* Section padding */
               padding: 40px 10px !important;
@@ -423,5 +430,4 @@ class Workprocess extends Component {
     );
   }
 }
-
 export default Workprocess;

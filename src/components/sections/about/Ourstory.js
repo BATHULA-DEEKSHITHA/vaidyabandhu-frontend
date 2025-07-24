@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "../../../assets/css/about.css";
 
-const baseTransition = "all 0.5s cubic-bezier(0.23, 1, 0.32, 1)";
+// Import Poppins font
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
 
+const baseTransition = "all 0.5s cubic-bezier(0.23, 1, 0.32, 1)";
 const OurStory = () => {
   const [animated, setAnimated] = useState(false);
   const [hoveredSection, setHoveredSection] = useState(null);
-
   useEffect(() => {
     const timer = setTimeout(() => setAnimated(true), 200);
     return () => clearTimeout(timer);
   }, []);
-
   return (
     <section className="about-section">
       <div className="container">
@@ -24,13 +29,14 @@ const OurStory = () => {
                 style={{
                   fontSize: "clamp(16px, 2.5vw, 20px)", // Responsive font size
                   color: "#4a5568", // Same color
-                  lineHeight: "1.7", // Matched line height
+                  lineHeight: "1.6", // Improved line height
                   fontWeight: "400",
                   marginBottom: "10px",
                   opacity: animated ? 1 : 0,
                   transform: animated ? "translateY(0)" : "translateY(20px)",
                   transition:
                     "opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s",
+                  fontFamily: "'Poppins', sans-serif", // Added Poppins
                 }}
               >
                 At Vaidyabandhu, we blend ancient wisdom with modern healthcare
@@ -43,7 +49,7 @@ const OurStory = () => {
         </div>
         <div
           className="row"
-          style={{ display: "flex", flexDirection: "column", gap: "40px" }}
+          style={{ display: "flex", flexDirection: "column", gap: "40px", fontFamily: "'Poppins', sans-serif" }}
         >
           {" "}
           {/* Increased gap */}
@@ -64,6 +70,7 @@ const OurStory = () => {
                 ? "translateY(0) scale(1)"
                 : "translateY(50px) scale(0.98)", // More pronounced entrance
               transitionDelay: "0.2s",
+              fontFamily: "'Poppins', sans-serif", // Added Poppins
             }}
             onMouseEnter={() => setHoveredSection("story")}
             onMouseLeave={() => setHoveredSection(null)}
@@ -78,6 +85,7 @@ const OurStory = () => {
                 paddingBottom: "10px", // More space for underline
                 textAlign: "center",
                 marginBottom: "10px", // More space below title
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               Our <span style={{ color: "#007a7e" }}>Story</span>
@@ -91,6 +99,7 @@ const OurStory = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(20px)",
                 transition: `opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               Healthcare is a basic necessity, yet millions of people struggle
@@ -105,6 +114,7 @@ const OurStory = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(20px)",
                 transition: `opacity 0.8s ease-out 0.6s, transform 0.8s ease-out 0.6s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               Understanding these challenges,{" "}
@@ -133,6 +143,7 @@ const OurStory = () => {
                 ? "translateY(0) scale(1)"
                 : "translateY(50px) scale(0.98)",
               transitionDelay: "0.4s",
+              fontFamily: "'Poppins', sans-serif", // Added Poppins
             }}
             onMouseEnter={() => setHoveredSection("vision")}
             onMouseLeave={() => setHoveredSection(null)}
@@ -146,6 +157,7 @@ const OurStory = () => {
                 paddingBottom: "10px",
                 textAlign: "center",
                 marginBottom: "15px",
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               Our <span style={{ color: "#007a7e" }}>Vision</span>
@@ -168,6 +180,7 @@ const OurStory = () => {
                 opacity: animated ? 1 : 0,
                 transform: animated ? "translateY(0)" : "translateY(20px)",
                 transition: `opacity 0.8s ease-out 0.8s, transform 0.8s ease-out 0.8s`,
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               To create a nationwide ecosystem where patients are respected,
@@ -191,6 +204,7 @@ const OurStory = () => {
                 ? "translateY(0) scale(1)"
                 : "translateY(50px) scale(0.98)",
               transitionDelay: "0.6s",
+              fontFamily: "'Poppins', sans-serif", // Added Poppins
             }}
             onMouseEnter={() => setHoveredSection("mission")}
             onMouseLeave={() => setHoveredSection(null)}
@@ -204,6 +218,7 @@ const OurStory = () => {
                 paddingBottom: "10px",
                 textAlign: "center", // Centered title for mission
                 marginBottom: "10px",
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               Our <span style={{ color: "#007a7e" }}>Mission</span>
@@ -215,14 +230,15 @@ const OurStory = () => {
                 color: "#4a5568",
                 textAlign: "center",
                 maxWidth: "800px",
+                 lineHeight: "1.6",
                 margin: "0 auto 25px",
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               To empower patients with timely medical guidance, trusted hospital
               access, and compassionate support throughout their healthcare
               journey.
             </p>
-
             {/* Mission Content: Image Left, Text Right */}
             <div
               style={{
@@ -230,6 +246,7 @@ const OurStory = () => {
                 flexWrap: "wrap", // Allow wrapping on smaller screens
                 alignItems: "center", // Vertically align items
                 gap: "30px", // Gap between image and text
+                fontFamily: "'Poppins', sans-serif", // Added Poppins
               }}
             >
               {/* Left Column: Image for Mission */}
@@ -241,6 +258,7 @@ const OurStory = () => {
                   opacity: animated ? 1 : 0,
                   transform: animated ? "translateX(0)" : "translateX(-50px)", // Slide in from left
                   transition: `opacity 0.8s ease-out 0.8s, transform 0.8s ease-out 0.8s`,
+                  fontFamily: "'Poppins', sans-serif", // Added Poppins
                 }}
               >
                 <img
@@ -257,7 +275,6 @@ const OurStory = () => {
                   }}
                 />
               </div>
-
               {/* Right Column: Mission Text Content */}
               <div
                 style={{
@@ -266,9 +283,10 @@ const OurStory = () => {
                   opacity: animated ? 1 : 0,
                   transform: animated ? "translateX(0)" : "translateX(50px)", // Slide in from right
                   transition: `opacity 0.8s ease-out 0.8s, transform 0.8s ease-out 0.8s`,
+                  fontFamily: "'Poppins', sans-serif", // Added Poppins
                 }}
               >
-                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, fontFamily: "'Poppins', sans-serif" }}>
                   {[
                     "Provide 10 - 40% discounts on surgeries, treatments, and diagnostics.",
                     "Offer free medical guidance to help people make informed decisions.",
@@ -302,6 +320,7 @@ const OurStory = () => {
                         transition: `opacity 0.8s ease-out ${
                           1.0 + index * 0.1
                         }s, transform 0.8s ease-out ${1.0 + index * 0.1}s`, // Staggered list item animation
+                        fontFamily: "'Poppins', sans-serif", // Added Poppins
                       }}
                     >
                       <span
@@ -311,12 +330,13 @@ const OurStory = () => {
                           fontSize: "1.6rem",
                           lineHeight: "1",
                           flexShrink: 0,
+                          fontFamily: "'Poppins', sans-serif", // Added Poppins
                         }}
                       >
                         ✔
                       </span>{" "}
                       {/* Accent color checkmark */}
-                      {item}
+                      <span style={{ fontFamily: "'Poppins', sans-serif" }}>{item}</span> {/* Added Poppins to item text */}
                     </li>
                   ))}
                 </ul>
@@ -325,7 +345,6 @@ const OurStory = () => {
           </div>
         </div>
       </div>
-
       {/* Keyframes for the floating background shapes */}
       <style>
         {`
@@ -339,7 +358,6 @@ const OurStory = () => {
             50% { transform: translate(-25px, -25px) rotate(-7deg); }
             100% { transform: translate(0, 0) rotate(0deg); }
           }
-
           /* Responsive adjustments */
           @media (max-width: 992px) {
             .row[style*="flex-direction: column"] > div { /* All main section cards */
@@ -370,7 +388,6 @@ const OurStory = () => {
             div[style*="gap: 60px"] { /* Gap between sections */
                 gap: 40px !important;
             }
-
             /* Mission section specific adjustments for stacking */
             div[style*="display: flex"][style*="flex-wrap: wrap"][style*="gap: 30px"] { /* Mission's inner flex container */
                 flex-direction: column !important; /* Stack image and text */
@@ -385,61 +402,49 @@ const OurStory = () => {
                 text-align: left !important; /* Keep text aligned left within its container */
             }
           }
-
 @media (max-width: 480px) {
   /* Reduce top & bottom spacing for the section */
   .leadership-section {
     padding-top: 100px !important;
     padding-bottom: 20px !important;
   }
-
   /* Reduce inner white card padding and margin */
   div[style*="padding: 40px"] {
     padding: 15px !important;
     margin-top: 30px !important;
     margin-bottom: 10px !important;
   }
-
   /* Reduce gap between stacked items */
   div[style*="flex-direction: column"][style*="gap: 40px"] {
     gap: 0 !important;
   }
-
   /* Adjust image size */
   img[style*="width: 150px"] {
     width: 100px !important;
     height: 100px !important;
   }
-
   /* Reduce heading font size */
   h2[style*="font-size"] {
     font-size: 18px !important;
   }
-
   /* Optional: Center-align image if needed */
   img {
     display: block !important;
     margin: 0 auto !important;
   }
-
   /* ✅ New: Reduce mission list item font size on mobile */
   .mission-list-item {
     font-size: 13px !important;
   }
-
   /* Optional: Reduce ✔ icon size in list */
   .mission-list-item span {
     font-size: 1.2rem !important;
     margin-right: 10px !important;
   }
 }
-
-
-
         `}
       </style>
     </section>
   );
 };
-
 export default OurStory;

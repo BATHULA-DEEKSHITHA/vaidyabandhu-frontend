@@ -56,7 +56,7 @@ const ClientLogosCarousel = () => {
           color: "#4a5568",
           lineHeight: "1.4",
           fontWeight: "400",
-          fontFamily: "'Inter', sans-serif",
+           fontFamily: "'Poppins', sans-serif",
           maxWidth: "800px",
           margin: "0 auto 40px",
           opacity: animated ? 1 : 0,
