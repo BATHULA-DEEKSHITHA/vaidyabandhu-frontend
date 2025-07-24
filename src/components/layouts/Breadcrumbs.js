@@ -22,12 +22,7 @@ class Breadcrumbs extends Component {
                    <div className="sigma_subheader-inner">
                        <h1>{this.props.breadcrumb.pagename}</h1>
                    </div>
-                   {/* <ol className="breadcrumb">
-                       <li className="breadcrumb-item">
-                           <Link to="/" className="btn-link">Home</Link>
-                       </li>
-                       <li className="breadcrumb-item active" aria-current="page">{this.props.breadcrumb.pagename}</li>
-                   </ol> */}
+                 
                </div>
                {/* Replaced multiple images with a single banner image */}
                <img
