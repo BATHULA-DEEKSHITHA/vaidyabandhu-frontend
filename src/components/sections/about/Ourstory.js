@@ -23,7 +23,7 @@ const OurStory = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="about-section-title text-center">
-              <span className="subtitle">Our Story</span>
+
               <h2>Leading the Way in Holistic Healthcare</h2>
               <p
                 style={{
