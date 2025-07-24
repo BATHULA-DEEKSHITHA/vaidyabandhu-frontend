@@ -6,7 +6,7 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 
 const Content = () => {
-  const [departments, setDepartments] = useState([]); // Departments from API
+  const [departments, setDepartments] = useState([]);
   const [specialties, setSpecialties] = useState([]); // Specialties for dropdown
   const [locations, setLocations] = useState([]); // Locations for dropdown
   const [activePage, setActivePage] = useState(1);
